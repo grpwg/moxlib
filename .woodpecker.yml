@@ -2,7 +2,7 @@ pipeline:
   lint:
     image: dart:3.0.7
     commands:
-      - dart pub get
+      - dart pub --verbose get
       - dart analyze --fatal-infos --fatal-warnings
   test:
     image: dart:3.0.7
