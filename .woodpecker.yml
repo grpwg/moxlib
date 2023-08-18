@@ -9,3 +9,13 @@ pipeline:
     commands:
       - dart pub get
       - dart test
+  notify:
+    image: git.polynom.me/papatutuwawa/woodpecker-xmpp
+    settings:
+      xmpp_muc: moxxy-build@muc.moxxy.org
+      xmpp_tls: 1
+    secrets: [ xmpp_jid, xmpp_password, xmpp_server ]
+    when:
+      status:
+        - success
+        - failure
