@@ -10,7 +10,7 @@ pipeline:
       - dart pub get
       - dart test
   notify:
-    image: git.polynom.me/papatutuwawa/woodpecker-xmpp
+    image: git.polynom.me/papatutuwawa/woodpecker-xmpp:0.1.0
     settings:
       xmpp_muc: moxxy-build@muc.moxxy.org
       xmpp_tls: 1
