@@ -16,6 +16,7 @@ pipeline:
       xmpp_is_muc: 1
       xmpp_recipient: moxxy-build@muc.moxxy.org
       xmpp_alias: 2Bot
+      debug: 1
     secrets: [ xmpp_jid, xmpp_password, xmpp_server ]
     when:
       status:
