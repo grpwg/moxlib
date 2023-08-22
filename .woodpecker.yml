@@ -2,7 +2,7 @@ pipeline:
   lint:
     image: dart:3.0.7
     commands:
-      - PUB_HOSTED_URL=http://172.17.0.1:8000 dart pub get --verbose --no-precompile
+      - PUB_HOSTED_URL=http://172.17.0.1:8000 dart pub get --no-precompile
       - dart analyze --fatal-infos --fatal-warnings
   test:
     image: dart:3.0.7
@@ -10,7 +10,7 @@ pipeline:
       - dart pub get
       - dart test
   notify:
-    image: git.polynom.me/papatutuwawa/woodpecker-xmpp:0.1.1-arm64
+    image: git.polynom.me/papatutuwawa/woodpecker-xmpp
     settings:
       xmpp_muc: moxxy-build@muc.moxxy.org
       xmpp_tls: 1
